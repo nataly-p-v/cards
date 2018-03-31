@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+body {
+  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+  margin: 12px 0;
+}
+.cards{
+  display: flex;
+}
+.card-container {
+  display: block;
+  cursor: pointer;
+  height: 408px;
+  perspective: 600;
+  position: relative;
+  width: 297px;
+}
+.card {
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+/*.card:hover {*/
+  /*transform: rotateY(180deg);*/
+/*}*/
+.opened {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  background: #eaeaed;
+  color: black;
+  font-size:150px;
+  line-height: 150px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+.removed{
+  opacity:0;
+}
+.current{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left:0;
+  right:0;
+}
